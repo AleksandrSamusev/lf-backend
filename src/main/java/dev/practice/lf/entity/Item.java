@@ -32,7 +32,7 @@ public class Item {
     @JsonFormat(pattern="yyyy-MM-dd")
     private LocalDate foundDate;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany /*(fetch = FetchType.EAGER, cascade = CascadeType.ALL)*/
     @JoinTable(name = "items_categories",
     joinColumns = @JoinColumn(name = "item_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "category_id", referencedColumnName = "id")

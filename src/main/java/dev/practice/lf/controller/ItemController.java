@@ -23,8 +23,8 @@ public class ItemController {
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
-    public ResponseEntity<Item> createItem(@RequestBody ItemDto itemDto) {
-        Item savedItem = itemService.createItem(itemDto);
+    public ResponseEntity<ItemFullDto> createItem(@RequestBody ItemDto itemDto) {
+        ItemFullDto savedItem = itemService.createItem(itemDto);
         return new ResponseEntity<>(savedItem, HttpStatus.CREATED);
     }
 

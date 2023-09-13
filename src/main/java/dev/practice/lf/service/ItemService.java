@@ -7,7 +7,7 @@ import dev.practice.lf.entity.Item;
 import java.util.List;
 
 public interface ItemService {
-    Item createItem(ItemDto dto);
+    ItemFullDto createItem(ItemDto dto);
     ItemFullDto getItemById(Long itemId);
     List<ItemFullDto> getAllItems();
     ItemFullDto updateItem(Long itemId, ItemDto updatedItem);
