@@ -5,6 +5,7 @@ import dev.practice.lf.entity.Category;
 import dev.practice.lf.exception.ResourceNotFoundException;
 import dev.practice.lf.mapper.CategoryMapper;
 import dev.practice.lf.repository.CategoryRepository;
+import dev.practice.lf.repository.ItemRepository;
 import dev.practice.lf.service.CategoryService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -59,6 +60,4 @@ public class CategoryServiceImpl implements CategoryService {
         categoryRepository.deleteById(id);
         return "Category with id:" + id + " was successfully deleted";
     }
-
-
 }
